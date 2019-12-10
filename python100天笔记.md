@@ -80,7 +80,7 @@ if __name__ == '__main__':
 
 #### 为什么要定义类
 定义一个矩形的类，目的是求周长和面积。
-1、不用init()方法定义类
+* 1、不用init()方法定义类
 ```Python
 class Rectangle():
     def getPeri(self,a,b):
@@ -106,3 +106,31 @@ print(rect.__dict__)
 并且，在实例化对象的时候，rect = Rectangle()参数为空，没有指定a、b的值，只有在调用函数的时候才指定了。且类中定义的每个方法的参数都有a、b，这显然浪费感情，在类中直接指定方法就可以了。   
 
 因此吧，需要在类中定义init()方法，方便创建实例的时候，需要给实例绑定上属性，也方便类中的方法（函数）的定义。
+
+* 2、用init()方法定义类
+上述同样的例子，采用init()方法定义类，如下：
+```Python
+class Rectangle():
+
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+
+    def getPeri(self):
+        return (self.a + self.b)*2
+
+    def getArea(self):
+        return self.a * self.b
+
+rect = Rectangle(3,4)
+print(rect.getPeri())
+print(rect.getArea())
+print(rect.__dict__)
+```
+得到结果如下：
+```Python
+14
+12
+{'a': 3, 'b': 4}
+```
+定义完init()后，创建的每个实例都有自己的属性，也方便直接调用类中的函数。
