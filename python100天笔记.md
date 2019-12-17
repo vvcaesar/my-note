@@ -145,13 +145,13 @@ day8 面向对象编程
     内部调用时都需要加上self.
     外部调用时用instancename.propertyname
 * 2 类属性：  
-  　在__init__()外初始化  
+    在__init__()外初始化  
     在内部用classname.类属性名调用  
     外部既可以用classname.类属性名又可以用instancename.类属性名来调用  
 * 3 私有属性：  
-	1）：单下划线_开头：只是告诉别人这是私有属性，外部依然可以访问更改  
-	2）：双下划线__开头：外部不可通过instancename.propertyname来访问或者更改  
-		实际将其转化为了_classname__propertyname  
+    1）：单下划线_开头：只是告诉别人这是私有属性，外部依然可以访问更改  
+    2）：双下划线__开头：外部不可通过instancename.propertyname来访问或者更改  
+      实际将其转化为了_classname__propertyname  
 例子：
 ```Python
 class Test:
