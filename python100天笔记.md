@@ -60,7 +60,7 @@ class Student(object):
         if self.age < 18:
             print('%s只能观看《熊出没》.' % self.name)
         else:
-            print('%s正在观看岛国爱情大电影.' % self.name)
+            print('%s正在观看爱情大电影.' % self.name)
 
 def main():
     # 创建学生对象并指定姓名和年龄
@@ -247,7 +247,7 @@ class Person(object):
 
     def watch_av(self):
         if self._age >= 18:
-            print('%s正在观看爱情动作片.' % self._name)
+            print('%s正在观看爱情大电影.' % self._name)
         else:
             print('%s只能观看《熊出没》.' % self._name)
 
